@@ -3,7 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <title>Numbers and Facts</title>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto mt-5">
+          <div class="card bg-primary text-white text-center p-1">
+            <h3>Numbers and Facts</h3>
+          </div>
+          <div class="form-group mt-4">
+            <input
+              class="form-control form-control-lg"
+              type="number"
+              placeholder="Input a number..."
+              id="input"
+            />
+          </div>
+          <div class="alert alert-dismissible alert-light" id="fact">
+            <button type="button" class="close" data-dismiss="alert">
+              &times;
+            </button>
+            <strong>Fact!</strong>
+            <p id="factText"></p>
+          </div>
+          <div class="alert alert-dismissible alert-light" id="fact">
+            <button type="button" class="close" data-dismiss="alert">
+              &times;
+            </button>
+            <strong>Fact!</strong>
+            <p id="factText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
