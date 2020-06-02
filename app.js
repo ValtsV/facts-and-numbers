@@ -1,13 +1,9 @@
 const fact = document.getElementById("fact");
 const factText = document.getElementById("factText");
-const closeBtn = document.getElementsByClassName("close");
 const input = document.getElementById("input");
 
 input.addEventListener("input", getFactAjax);
-// console.log(closeBtn);
-// Array.from(closeBtn).forEach((el) =>
-//   el.addEventListener("click", closeBtnFunc)
-// );
+fact.addEventListener("click", closeFunc);
 
 function getFactAjax() {
   const number = input.value;
@@ -27,6 +23,8 @@ function getFactAjax() {
   xhr.send();
 }
 
-// function closeBtnFunc() {
-//   this.parentElement.classList.add("d-none");
-// }
+function closeFunc(e) {
+  if (e.target.classList.contains("close")) {
+    fact.classList.add("d-none");
+  }
+}
