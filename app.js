@@ -1,6 +1,7 @@
 const fact = document.getElementById("fact");
 const factText = document.getElementById("factText");
 const input = document.getElementById("input");
+const errorCont = document.getElementById("error");
 
 input.addEventListener("input", getFactFetch);
 fact.addEventListener("click", closeFunc);
@@ -31,7 +32,9 @@ function getFactFetch() {
         factText.innerText = data;
       }
     })
-    .catch((err) => console.log("dangit"));
+    .catch((err) => {
+      errorCont.innerText = "Something went wrong!";
+    });
 }
 
 function closeFunc(e) {
